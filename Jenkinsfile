@@ -6,12 +6,11 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("vnmoliveira/api-web-express", '-f ./backend/Dockerfile ./backend') {
-                        
-                    }
+                    dockerapp = docker.build("vnmoliveira/api-web-express", '-f ./backend/Dockerfile ./backend')
                 }
 
             }
         }
     }
 }
+//mudança!
