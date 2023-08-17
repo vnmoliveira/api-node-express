@@ -16,7 +16,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags:
+          tags: |
             vnmoliveira/web-api-node:v1
             vnmoliveira/web-api-node:latest
             
