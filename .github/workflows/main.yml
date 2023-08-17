@@ -1,0 +1,23 @@
+name: CI-CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3.5.3
+      - name: Construção imagem Docker
+        uses: docker/build-push-action@v4.1.1
+        with:  
+          context: ./backend
+          file: ./backend/Dockerfile
+          push: true
+          tags:
+            vnmoliveira/web-api-node:v1
+            vnmoliveira/web-api-node:latest
+            
+      
