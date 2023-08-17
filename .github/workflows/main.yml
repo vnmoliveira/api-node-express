@@ -25,7 +25,7 @@ jobs:
           file: ./backend/Dockerfile
           push: true
           tags: |
-            vnmoliveira/web-api-node:v1
+            vnmoliveira/web-api-node:${{github.run_number}}
             vnmoliveira/web-api-node:latest
     
             
