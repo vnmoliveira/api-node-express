@@ -4,6 +4,9 @@ version: '3'
 networks:
   nova-net:
     driver: bridge
+
+volumes:
+  mysql-vol:
   
 services:
 
@@ -17,6 +20,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql-vol:/var/lib/mysql
 
 
   adminer:
